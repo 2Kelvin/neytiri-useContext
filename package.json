@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwindscan": "tailwindcss -i ./input.css -o ./dist/output.css --watch",
-    "babelwatch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "tailwindscan": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "babelwatch": "babel --watch src --out-dir ./dist/ --presets react-app/prod"
   },
   "keywords": [],
   "author": "",

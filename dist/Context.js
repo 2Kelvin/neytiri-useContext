@@ -1,1 +1,1 @@
-export const ImageSizeContext = React.useContext(500);
+export const ImageSizeContext = React.createContext(200);
