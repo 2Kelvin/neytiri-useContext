@@ -5,18 +5,18 @@ export default function List() {
   var list = neytiri_pictures.map(function (picture) {
     return React.createElement(
       "li",
-      { key: picture.id },
+      { key: picture.id, className: "my-4 min-w-[150] max-w-[250]" },
       React.createElement(Image, { picture: picture }),
       React.createElement(
         "p",
-        null,
+        { className: "text-xs text-gray-800" },
         picture.description
       )
     );
   });
   return React.createElement(
     "ul",
-    null,
+    { className: "my-4" },
     list
   );
 }

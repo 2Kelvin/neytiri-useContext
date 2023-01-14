@@ -9,6 +9,7 @@ export default function Image({ picture }) {
       alt="Ney'tiri"
       height={imageSize}
       width={imageSize}
+      className="object-contain rounded shadow-lg"
     />
   );
 }

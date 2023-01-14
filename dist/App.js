@@ -9,25 +9,34 @@ export default function App() {
       isLarge = _React$useState2[0],
       setIsLarge = _React$useState2[1];
 
-  var imgSize = isLarge ? 200 : 100;
+  var imgSize = isLarge ? 200 : 150;
 
   return React.createElement(
-    ImageSizeContext.Provider,
-    { value: imgSize },
+    "div",
+    { className: "m-auto w-fit mt-20" },
     React.createElement(
-      "label",
-      null,
-      React.createElement("input", {
-        type: "checkbox",
-        checked: isLarge,
-        onChange: function onChange(e) {
-          setIsLarge(e.target.checked);
-        }
-      }),
-      "Use large images"
-    ),
-    React.createElement("hr", null),
-    React.createElement(List, null)
+      ImageSizeContext.Provider,
+      { value: imgSize },
+      React.createElement(
+        "label",
+        { className: "flex items-center my-2" },
+        React.createElement("input", {
+          className: "mr-2",
+          type: "checkbox",
+          checked: isLarge,
+          onChange: function onChange(e) {
+            setIsLarge(e.target.checked);
+          }
+        }),
+        React.createElement(
+          "span",
+          { className: "font-semibold" },
+          "Use large images"
+        )
+      ),
+      React.createElement("hr", { className: "my-4" }),
+      React.createElement(List, null)
+    )
   );
 }
 
